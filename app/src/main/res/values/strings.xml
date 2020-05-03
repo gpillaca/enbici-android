@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Enbici</string>
+
+    <string name="msg_location_disable_title">Servicios de ubicación inhabilitados</string>
+    <string name="msg_location_disable_msg">Necesitamos acceder a tu ubicación. Por favor activa los servicios de ubicación</string>
+
+    <!--Dialog requesting to activate GPS-->
+    <string name="configuration">Configuración</string>
+    <string name="ignore">Ignorar</string>
+
+    <!--General Errors-->
+    <string name="error_unknown">Ha ocurrido un error desconocido, por favor inténtalo nuevamente o más tarde.</string>
+    <string name="error_unexpected">Ha ocurrido un error inesperado, por favor inténtalo nuevamente o más tarde.</string>
+    <string name="error_parse">Ha ocurrido un error al interpretar la data recibida, por favor inténtalo nuevamente o más tarde.</string>
+    <string name="error_local_save">Ha ocurrido un error intentando almacenar los datos.</string>
+    <string name="error_connection">No podemos obtener información en estos momentos. Por favor verifica tu conexión a internet o intenta nuevamente</string>
+    <string name="error_check_connection">Por favor verifica tu conexión a internet y vuelve a intentarlo</string>
+    <string name="error">Error</string>
+    <string name="error_by_fields">Errores por campo:</string>
+    <string name="reservation">Reservar</string>
+    <string name="reserve">Reservar</string>
+    <string name="connect">Iniciar Sesión</string>
+    <string name="msg_gps_disabled">Se requiere acceso a tu ubicación, enciende el GPS.</string>
+    <string name="ups">Ups!</string>
+    <string name="info_bicycles">Bicicletas disponibles</string>
+    <string name="info_distance">Distancia</string>
 </resources>
