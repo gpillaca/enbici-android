@@ -2,8 +2,9 @@ package pe.gob.msb.gp.enbici.data.source
 
 import android.location.Location
 import pe.gob.msb.gp.enbici.domain.BicycleStation
+import javax.inject.Inject
 
-class InMemoryPersistentStorage : PersistentStorage {
+class InMemoryPersistentStorage @Inject constructor() : PersistentStorage {
 
     private var location: Location? = null
     private var bicycleStations: List<BicycleStation> = listOf()

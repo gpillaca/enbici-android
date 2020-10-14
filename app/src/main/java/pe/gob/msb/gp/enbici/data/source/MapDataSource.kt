@@ -3,8 +3,9 @@ package pe.gob.msb.gp.enbici.data.source
 import pe.gob.msb.gp.enbici.data.*
 import pe.gob.msb.gp.enbici.data.server.*
 import pe.gob.msb.gp.enbici.domain.*
+import javax.inject.Inject
 
-class MapDataSource(
+class MapDataSource @Inject constructor(
     private val fireFighterDbService: FireFighterDbService,
     private val huacaDbService: HuacaDbService,
     private val kallpawasiDbService: KallpawasiDbService,

@@ -1,5 +1,6 @@
 package pe.gob.msb.gp.enbici.data.server
 
+import pe.gob.msb.gp.enbici.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -8,7 +9,7 @@ object ApiClient {
     private val retrofit: Retrofit by lazy {
         Retrofit
             .Builder()
-            .baseUrl("https://localhost/")
+            .baseUrl(BuildConfig.REST_ENBICI)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

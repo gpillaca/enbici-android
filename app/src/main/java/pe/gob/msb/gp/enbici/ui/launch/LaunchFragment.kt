@@ -7,16 +7,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import org.koin.android.ext.android.inject
+import dagger.hilt.android.AndroidEntryPoint
 import pe.gob.msb.gp.enbici.R
 import pe.gob.msb.gp.enbici.util.PermissionHelper
+import javax.inject.Inject
 
 private const val REQUEST_LOCATION = 1
 
-class SplashFragment : Fragment(),
-    LaunchContract.View {
+@AndroidEntryPoint
+class LaunchFragment : Fragment() {
 
-    private val permissionHelper: PermissionHelper by inject()
+    @Inject
+    lateinit var permissionHelper: PermissionHelper
+
     private var listener: ActionListener? = null
 
     interface ActionListener {
@@ -30,7 +33,7 @@ class SplashFragment : Fragment(),
 
     companion object {
         @JvmStatic
-        fun newInstance() = SplashFragment()
+        fun newInstance() = LaunchFragment()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

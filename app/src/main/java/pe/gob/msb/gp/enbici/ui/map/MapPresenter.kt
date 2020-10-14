@@ -8,8 +8,9 @@ import pe.gob.msb.gp.enbici.data.repository.LocationRepository
 import pe.gob.msb.gp.enbici.data.repository.MapRepository
 import pe.gob.msb.gp.enbici.ui.common.Scope
 import timber.log.Timber
+import javax.inject.Inject
 
-class MapPresenter(
+class MapPresenter @Inject constructor(
     private val mapRepository: MapRepository,
     private val locationRepository: LocationRepository
 ) : MapContract.Presenter,

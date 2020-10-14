@@ -5,8 +5,9 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import javax.inject.Inject
 
-class PermissionHelperImpl : PermissionHelper {
+class PermissionHelperImpl @Inject constructor(): PermissionHelper {
 
     private val accessFineLocation: String by lazy {
         android.Manifest.permission.ACCESS_FINE_LOCATION

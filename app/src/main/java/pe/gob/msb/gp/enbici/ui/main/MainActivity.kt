@@ -2,10 +2,12 @@ package pe.gob.msb.gp.enbici.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
 import pe.gob.msb.gp.enbici.R
 import pe.gob.msb.gp.enbici.databinding.ActivityMainBinding
 import pe.gob.msb.gp.enbici.ui.map.MapFragment
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

@@ -12,7 +12,7 @@ import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.*
 import com.google.gson.Gson
-import org.koin.android.ext.android.inject
+import dagger.hilt.android.AndroidEntryPoint
 import pe.gob.msb.gp.enbici.R
 import pe.gob.msb.gp.enbici.databinding.FragmentMapBinding
 import pe.gob.msb.gp.enbici.databinding.ViewProgressBarBinding
@@ -22,7 +22,9 @@ import pe.gob.msb.gp.enbici.ui.common.infowindow.CustomMaker
 import pe.gob.msb.gp.enbici.ui.common.infowindow.TypeMarker
 import pe.gob.msb.gp.enbici.ui.common.infowindow.TypeMarker.*
 import pe.gob.msb.gp.enbici.util.defaultConfig
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MapFragment : Fragment(),
     MapContract.View,
     View.OnClickListener,
@@ -35,7 +37,9 @@ class MapFragment : Fragment(),
     private var listener: ActionListener? = null
     private var mapView: MapView? = null
     private var isRestore = false
-    private val presenter: MapContract.Presenter by inject()
+
+    @Inject
+    lateinit var presenter: MapContract.Presenter
 
     companion object {
         @JvmStatic

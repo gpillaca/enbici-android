@@ -5,10 +5,11 @@ import pe.gob.msb.gp.enbici.data.source.PersistentStorage
 import pe.gob.msb.gp.enbici.data.source.RemoteDataSource
 import pe.gob.msb.gp.enbici.domain.*
 import pe.gob.msb.gp.enbici.util.DistanceUtil
+import javax.inject.Inject
 
 private const val DEFAULT_DISTANCE = 0.0
 
-class MapRepositoryImpl(
+class MapRepositoryImpl @Inject constructor(
     private val remoteDataSource: RemoteDataSource,
     private val persistentStorage: PersistentStorage
 ) : MapRepository {

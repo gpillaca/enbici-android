@@ -2,15 +2,15 @@ package pe.gob.msb.gp.enbici
 
 import android.app.Application
 import com.google.firebase.crashlytics.FirebaseCrashlytics
-import pe.gob.msb.gp.enbici.di.initDI
+import dagger.hilt.android.HiltAndroidApp
 import pe.gob.msb.gp.enbici.util.CrashlyticsTree
 import timber.log.Timber
 
-class AppConfiguration: Application() {
+@HiltAndroidApp
+class EnBiciApp: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        initDI()
         initTimberWithFirebaseCrashlytics()
     }
 

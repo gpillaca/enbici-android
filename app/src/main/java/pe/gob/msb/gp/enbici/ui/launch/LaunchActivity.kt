@@ -3,10 +3,12 @@ package pe.gob.msb.gp.enbici.ui.launch
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import dagger.hilt.android.AndroidEntryPoint
 import pe.gob.msb.gp.enbici.R
 import pe.gob.msb.gp.enbici.ui.main.MainActivity
 
-class LaunchActivity : AppCompatActivity(), SplashFragment.ActionListener {
+@AndroidEntryPoint
+class LaunchActivity : AppCompatActivity(), LaunchFragment.ActionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -14,7 +16,7 @@ class LaunchActivity : AppCompatActivity(), SplashFragment.ActionListener {
 
         supportFragmentManager
             .beginTransaction()
-            .replace(R.id.frameLayoutContent, SplashFragment.newInstance())
+            .replace(R.id.frameLayoutContent, LaunchFragment.newInstance())
             .commit()
     }
 
